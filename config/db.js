@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
+
 // import mongoose  from "mongoose"
 
 module.exports= ()=>{
-    console.log('okok')
-    return mongoose.connect('mongodb+srv://suniljaiswal099:zm8FtObog3kfwXiP@one.xouhyxz.mongodb.net/?retryWrites=true&w=majority')
+    return mongoose.connect(process.env.MY_DB)
 }
